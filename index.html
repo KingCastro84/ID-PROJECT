@@ -102,16 +102,16 @@
 
   <!-- Guide Section -->
   <div class="guide">
-    <h2>📖 How to Use This Website</h2>
+    <h2> How to Use This Website</h2>
     <p>Welcome to <b>IDReady Checker</b> — a simple tool that helps you know whether your National ID is ready without visiting the chief’s office.</p>
     <ul>
-      <li>🔢 <b>Step 1:</b> Enter your <i>serial number</i> in the input box above.</li>
-      <li>👆 <b>Step 2:</b> Click <i>Check Status</i>.</li>
-      <li>📊 <b>Step 3:</b> Wait for the result to appear.</li>
+      <li> <b>Step 1:</b> Enter your <i>serial number</i> in the input box above.</li>
+      <li> <b>Step 2:</b> Click <i>Check Status</i>.</li>
+      <li> <b>Step 3:</b> Wait for the result to appear.</li>
     </ul>
-    <p><span class="status" style="color:green;">✅ Ready:</span> Your ID is available for collection.</p>
-    <p><span class="status" style="color:orange;">⏳ Waiting:</span> Your ID is still being processed.</p>
-    <p><span class="status" style="color:red;">❌ Error:</span> ID not found or wrong serial number.</p>
+    <p><span class="status" style="color:green;"> Ready:</span> Your ID is available for collection.</p>
+    <p><span class="status" style="color:orange;"> Waiting:</span> Your ID is still being processed.</p>
+    <p><span class="status" style="color:red;"> Error:</span> ID not found or wrong serial number.</p>
   </div>
 
   <script>
@@ -120,7 +120,7 @@
       const result = document.getElementById("result");
 
       if (!serial) {
-        result.textContent = "⚠️ Please enter a serial number.";
+        result.textContent = " Please enter a serial number.";
         result.style.color = "red";
         return;
       }
@@ -135,20 +135,21 @@
       if (mockDatabase[serial]) {
         let status = mockDatabase[serial];
         if (status === "Ready") {
-          result.textContent = "✅ Your ID is Ready!";
+          result.textContent = " Your ID is Ready!";
           result.style.color = "green";
         } else if (status === "Waiting") {
-          result.textContent = "⏳ Your ID is still being processed.";
+          result.textContent = " Your ID is still being processed.";
           result.style.color = "orange";
         } else {
-          result.textContent = "❌ Error occurred while checking ID.";
+          result.textContent = " Error occurred while checking ID.";
           result.style.color = "red";
         }
       } else {
-        result.textContent = "❌ ID not found.";
+        result.textContent = " ID not found.";
         result.style.color = "red";
       }
     }
   </script>
 </body>
 </html>
+
