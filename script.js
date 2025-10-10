@@ -7,7 +7,12 @@ if (!serial) {
     result.style.color = "red";
     return;
     }
-
+ // Check if it contains only numbers
+  if (!/^[0-9]+$/.test(serial)) {
+    result.textContent = "Serial number should contain numbers only.";
+    result.style.color = "red";
+    return; // stop here if letters or symbols are found
+  }
 // Example mock database
 const mockDatabase = {
     "12345": "Ready",
@@ -32,3 +37,4 @@ if (mockDatabase[serial]) {
         result.style.color = "red";
       }
     }
+
